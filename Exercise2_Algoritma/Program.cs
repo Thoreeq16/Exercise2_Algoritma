@@ -9,7 +9,7 @@ namespace LinearTest
     class Program
     {
         //array to be searched
-        int[] arr = new int[74];
+        int[] thoriq = new int[74];
         //number of element i n the array
         int n;
         //get the number of element to store in the array
@@ -36,7 +36,7 @@ namespace LinearTest
             {
                 Console.WriteLine('<' + (i + 1) + ">");
                 string s1 = Console.ReadLine();
-                arr[i] = Int32.Parse(s1);
+                thoriq[i] = Int32.Parse(s1);
             }
         }
 
@@ -55,7 +55,7 @@ namespace LinearTest
                 for (i = 0; i < n; i++)
                 {
                     ctr++;
-                    if (arr[i] == item)
+                    if (thoriq[i] == item)
                     {
                         Console.WriteLine("\n" + item.ToString() + " found st position " + (i + 1).ToString());
                         break;
