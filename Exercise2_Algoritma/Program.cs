@@ -13,7 +13,7 @@ namespace LinearTest
         //number of element i n the array
         int n;
         //get the number of element to store in the array
-        int i;
+        int th;
 
         public void input()
         {
@@ -32,11 +32,11 @@ namespace LinearTest
             Console.WriteLine("---------------------");
             Console.WriteLine(" Enter Array Element ");
             Console.WriteLine("---------------------");
-            for (i = 0; i < n; i++)
+            for (th = 0; th < n; th++)
             {
-                Console.WriteLine('<' + (i + 1) + ">");
+                Console.WriteLine('<' + (th + 1) + ">");
                 string s1 = Console.ReadLine();
-                thoriq[i] = Int32.Parse(s1);
+                thoriq[th] = Int32.Parse(s1);
             }
         }
 
@@ -52,16 +52,16 @@ namespace LinearTest
                 int item = Convert.ToInt32((Console.ReadLine()));
 
                 ctr = 0;
-                for (i = 0; i < n; i++)
+                for (th = 0; th < n; th++)
                 {
                     ctr++;
-                    if (thoriq[i] == item)
+                    if (thoriq[th] == item)
                     {
-                        Console.WriteLine("\n" + item.ToString() + " found st position " + (i + 1).ToString());
+                        Console.WriteLine("\n" + item.ToString() + " found st position " + (th + 1).ToString());
                         break;
                     }
                 }
-                if (i == n)
+                if (th == n)
                     Console.WriteLine("\n" + item.ToString() + "not found in the array");
                 Console.WriteLine("\nNumber of comparasion: " + ctr);
                 Console.WriteLine("\nContinue search (y/n): ");
