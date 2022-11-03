@@ -68,5 +68,45 @@ namespace LinearTest
                 ch = char.Parse(Console.ReadLine().ToUpper());
             } while ((ch == 'y'));
         }
+
+        static void Main(string[] args)
+        {
+            Program myList = new Program();
+            int pilihanmenu;
+            char ch;
+            do
+            {
+                do
+                {
+                    Console.WriteLine("Menu Option");
+                    Console.WriteLine("=================");
+                    Console.WriteLine("1. Linear search");
+                    Console.WriteLine("2. exit");
+                    Console.WriteLine("Enter your choice (1,2) : ");
+                    pilihanmenu = Convert.ToInt32(Console.ReadLine());
+                    switch (pilihanmenu)
+                    {
+                        case 1:
+                            Console.WriteLine("");
+                            Console.WriteLine("................");
+                            Console.WriteLine("Linear Search");
+                            Console.WriteLine("................");
+                            myList.input();
+                            myList.LinearSearch();
+                            break;
+                        case 2:
+                            Console.WriteLine("Exit");
+                            break;
+                    }
+                    Console.WriteLine("\nPilih menu lagi? (y/n): ");
+                    ch = char.Parse(Console.ReadLine().ToLower());
+                    Console.Clear();
+                } while (ch == 'y');
+
+                //to exit from the console
+                Console.WriteLine("\n\nPress return to exit. ");
+                Console.ReadLine();
+            } while (pilihanmenu != 0);
+        }
     }
 }
